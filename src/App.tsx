@@ -196,7 +196,7 @@ export default function App() {
         <div className="absolute top-[30%] left-[40%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.04)_0%,_transparent_70%)] pointer-events-none" />
 
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.04)_1px,_transparent_1px)] bg-[size:48px_48px] pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.04)_1px,_transparent_1px)] [background-size:48px_48px] pointer-events-none" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10 w-full max-w-[1200px] mx-auto">
           {/* Left copy */}
@@ -210,7 +210,7 @@ export default function App() {
                 Join the Queue
               </span>
               <br />
-              from Anywhere.
+              using Qoala App.
             </h1>
 
             <p className="m-0 mb-9 text-lg text-white/72 leading-relaxed max-w-[480px]">
@@ -280,7 +280,7 @@ export default function App() {
                   style={{
                     cursor: "pointer",
                     transition: "all 0.4s cubic-bezier(.34,1.56,.64,1)",
-                    transform: `rotate(${offset * 8}deg) scale(${isActive ? 1 : 0.82})`,
+                    transform: `rotate(${offset * 8}deg) scale(${isActive ? 1.1 : 0.82})`,
                     transformOrigin: "center bottom",
                     filter: isActive
                       ? "drop-shadow(0 20px 40px rgba(15,30,100,0.18))"
@@ -337,9 +337,7 @@ export default function App() {
               Why Students Love It
             </span>
             <h2 className="m-0 mt-3 text-[clamp(26px,4vw,40px)] font-black text-white tracking-tight leading-[1.15]">
-              Everything you need.
-              <br />
-              Nothing you don't.
+              Qoala transforms waiting time <br /> into productive time.
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -520,7 +518,9 @@ export default function App() {
         <div className="absolute -top-[60px] left-[20%] w-[300px] h-[300px] rounded-full bg-white/5 pointer-events-none" />
         <div className="absolute -bottom-[40px] right-[15%] w-[200px] h-[200px] rounded-full bg-white/6 pointer-events-none" />
         <div className="relative z-10">
-          <div className="text-5xl mb-4">🐨</div>
+          <div className="flex justify-center  mb-4">
+            <img src={logo} alt="" className="w-1/12 rounded-3xl shadow-lg" />
+          </div>
           <h2 className="m-0 mb-4 text-[clamp(28px,4vw,46px)] font-black text-white tracking-tighter leading-[1.1]">
             Ready to skip the line?
           </h2>
