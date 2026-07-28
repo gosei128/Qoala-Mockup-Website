@@ -5,6 +5,16 @@ import joinMockup from "./imports/join_mockup.png";
 import turnMockup from "./imports/turn_mockup.png";
 import logo from "./imports/logo.png";
 import stiLogo from "./imports/STI_LOGO.jpg";
+import {
+  Smartphone,
+  Bell,
+  Building,
+  Ticket,
+  Megaphone,
+  Lock,
+  User,
+  UserIcon,
+} from "lucide-react";
 
 // ─── Mini App Screens (rendered inside phone mockups) ─────────────────────────
 
@@ -17,7 +27,7 @@ function FeatureCard({
   body,
   accent,
 }: {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   body: string;
   accent: string;
@@ -342,37 +352,37 @@ export default function App() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
-              icon="📱"
+              icon={<Smartphone color="gray" />}
               title="Real-Time Queue Tracking"
               body="See live queue counts, estimated wait times, and your exact position — all updated instantly."
               accent="rgba(45,82,245,0.25)"
             />
             <FeatureCard
-              icon="🔔"
+              icon={<Bell color="gray" />}
               title="Smart Notifications"
               body="Get push alerts the moment it's your turn. Never miss your slot or waste time sitting in line."
               accent="rgba(16,185,129,0.2)"
             />
             <FeatureCard
-              icon="🏛️"
+              icon={<Building color="gray" />}
               title="Multi-Office Support"
               body="Cashier, Registrar, Admin, Accounting — manage queues across every campus office in one app."
               accent="rgba(251,191,36,0.2)"
             />
             <FeatureCard
-              icon="🎫"
+              icon={<Ticket color="gray" />}
               title="Digital Tickets"
               body="Your ticket number lives on your phone. Check queue history and rejoin queues with one tap."
               accent="rgba(239,68,68,0.2)"
             />
             <FeatureCard
-              icon="📢"
+              icon={<Megaphone color="gray" />}
               title="Office Announcements"
               body="Stay in the loop with real-time notices about office hours, closures, and schedule changes."
               accent="rgba(139,92,246,0.2)"
             />
             <FeatureCard
-              icon="🔒"
+              icon={<Lock color="gray" />}
               title="Secure Student Login"
               body="Sign in with your university email or Google account. Your data stays private and protected."
               accent="rgba(236,72,153,0.2)"
@@ -495,7 +505,7 @@ export default function App() {
                       background: `hsl(${220 + i * 40}, 60%, 60%)`,
                     }}
                   >
-                    🧑‍🎓
+                    <UserIcon color="#fff" />
                   </div>
                   <div>
                     <p className="m-0 mb-0.5 text-sm font-bold text-[#0C0E1A]">
