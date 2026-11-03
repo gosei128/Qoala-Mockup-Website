@@ -1,1 +1,10 @@
-{}
+{
+  "title": "Qoala · Skip the line at STI College Malolos",
+  "description": "Qoala lets you skip the line at STI College Malolos.",
+  "icons": {
+    "icon": "./src/imports/logo.png"
+  },
+  "openGraph": {
+    "image": "./src/imports/logo.png"
+  }
+}
